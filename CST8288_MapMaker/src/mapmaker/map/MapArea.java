@@ -321,7 +321,9 @@ public class MapArea extends Pane{
 			((PolyShape)t).addLock((Movable)path.getControlPoints()[1]);
 			getFirstContain(e.getX(), e.getY()).addLock((Movable)path.getControlPoints()[0]);
 		}
+	
 	}
+
 	
 	/**
 	 * <p>

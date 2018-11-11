@@ -11,22 +11,22 @@
     -fx-background-position: center;
 }
 #Room {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/40xp/plans.png);
+	-fx-background-image: url(../icons/40xp/plans.png);
 }
 #Select {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/40xp/cursor.png);
+	-fx-background-image: url(../icons/40xp/cursor.png);
 }
 #Move {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/40xp/move.png);
+	-fx-background-image: url(../icons/40xp/move.png);
 }
 #Erase {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/40xp/eraser.png);
+	-fx-background-image: url(../icons/40xp/eraser.png);
 }
 #Path {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/40xp/road.png);
+	-fx-background-image: url(../icons/40xp/road.png);
 }
 #Door {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/40xp/doorway.png);
+	-fx-background-image: url(../icons/40xp/doorway.png);
 }
 #Room:hover, #Erase:hover, #Path:hover, #Door:hover, #Move:hover, #Select:hover, #Color:hover {
 	-fx-background-color: lightgray ;
@@ -44,25 +44,25 @@
     -fx-background-position: center;
 }
 #Save-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/save.png);
+	-fx-background-image: url(../icons/20xp/save.png);
 }
 #Open-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/open-archive.png);
+	-fx-background-image: url(../icons/20xp/open-archive.png);
 }
 #New-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/new.png);
+	-fx-background-image: url(../icons/20xp/new.png);
 }
 #Exit-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/exit.png);
+	-fx-background-image: url(../icons/20xp/exit.png);
 }
 #Info-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/information.png);
+	-fx-background-image: url(../icons/20xp/information.png);
 }
 #Help-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/question.png);
+	-fx-background-image: url(../icons/20xp/question.png);
 }
 #Credit-icon {
-	-fx-background-image: url(file:///C:/Users/Adriano/eclipse-workspace/CST8288_MapMaker/src/resources/icons/20xp/open-book.png);
+	-fx-background-image: url(../icons/20xp/open-book.png);
 }
 
 /*hide arrow of MenuButton*/

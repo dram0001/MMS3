@@ -30,6 +30,7 @@ public class ToolState {
 	 */
 	private int option;
 	
+	
 	/**
 	 * <p>
 	 * private default constructor to prevent creation of this object.</br>
@@ -79,5 +80,7 @@ public class ToolState {
 	 * @return integer value representing the option for current active {@link Tools}
 	 */
 	public int getOption()  { return option;}
+	
+	
 
 }

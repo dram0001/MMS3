@@ -94,12 +94,20 @@ public class PolyShape extends Polygon implements Movable {
 	 */
 	private ObservableList<Movable> locks;
 	
+	private static int ID_CTR = 0;
+	
+	private int ID;
+	
+	
+	
+	
 	/**
 	 * <p>
 	 * use these static final variables to convert form and to string.</br>
 	 * allowing changes for key words to be in one place.</br>
 	 * </p>
 	 */
+	private static final String SHAPE_ID = "ID";
 	private static final String POINTS_COUNT = "sides";
 	private static final String FILL = "fill";
 	private static final String STROKE = "stroke";
@@ -117,6 +125,8 @@ public class PolyShape extends Polygon implements Movable {
 	 */
 	public PolyShape(int sides){
 		super();
+		ID = ID_CTR;
+		ID_CTR++;
 		this.sides = sides;
 		pPoints = getPoints();
 		locks = FXCollections.observableArrayList();
@@ -135,6 +145,8 @@ public class PolyShape extends Polygon implements Movable {
 		convertFromString( list);
 		//shape is complete so registerControlPoints is called in constructor
 		registerControlPoints();
+		setPolyStyle(Color.LIGHTGREEN, Color.GREY, 3);
+		locks = FXCollections.observableArrayList();
 	}
 	
 	/**
@@ -272,7 +284,9 @@ public class PolyShape extends Polygon implements Movable {
 	}
 	
 	/**
-	 *
+	 * <p>
+	 * returns the ObservableList<Movable> locks.
+	 * </p>
 	 * @return locks
 	 */
 	public ObservableList<Movable> getLocks() {
@@ -318,6 +332,7 @@ public class PolyShape extends Polygon implements Movable {
 	public String convertToString(){
 		String newLine = System.lineSeparator();
 		StringBuilder builder = new StringBuilder();
+		builder.append( SHAPE_ID).append( " ").append( ID).append( newLine);
 		builder.append( POINTS_COUNT).append( " ").append( sides).append( newLine);
 		builder.append( FILL).append( " ").append( colorToString( getFill())).append( newLine);
 		builder.append( STROKE).append( " ").append( colorToString( getStroke())).append( newLine);
@@ -340,6 +355,9 @@ public class PolyShape extends Polygon implements Movable {
 		list.forEach( line -> {
 			String[] tokens = line.split( " ");
 			switch( tokens[0]){
+				case SHAPE_ID:
+					ID = Integer.valueOf( tokens[1]);
+				break;
 				case POINTS_COUNT:
 					sides = Integer.valueOf( tokens[1]);
 					break;
@@ -384,6 +402,7 @@ public class PolyShape extends Polygon implements Movable {
 	for(Movable m : locks)
 		m.translate(dx, dy);
 	}
+	
 	
 	/**
 	 * <p>

@@ -42,14 +42,10 @@ import mapmaker.map.tools.Tools;
 import javafx.stage.Stage;
 
 
-/* sequence diagrams: erase, move
- * 
- */
-
 /**
  * The start of the MapMaker Application, initializes GUI components and</br>
  * creates connections to managing classes.
- * @author Adriano
+ * @author Adriano Dramisino
  *
  */
 public class MapMaker extends Application{
@@ -59,27 +55,27 @@ public class MapMaker extends Application{
 	 * these static final fields are file and directory paths for this application.</br>
 	 * </p>
 	 */
-	public static final String INFO_PATH      = "/resources/icons/info.txt";
-	public static final String HELP_PATH      = "/resources/icons/help.txt";
-	public static final String CREDITS_PATH   = "/resources/icons/credits.txt";
-	public static final String CSS_PATH       = "/resources/css/style.css";
-	public static final String MAPS_DIRECTORY = "/resources/maps";
+	private static final String INFO_PATH      = "/resources/icons/info.txt";
+	private static final String HELP_PATH      = "/resources/icons/help.txt";
+	private static final String CREDITS_PATH   = "/resources/icons/credits.txt";
+	private static final String CSS_PATH       = "/resources/css/style.css";
 	
 	/**
 	 * <p>
-	 * these final fields represent the number of sides for the given {@link PolyShape}.</br>
+	 * these static final fields represent the number of sides for the given {@link PolyShape}.</br>
 	 * </p>
 	 */
-	private final int LINE = 2;
-	private final int TRIANGLE = 3;
-	private final int RECTANGLE = 4;
-	private final int PENTAGON = 5;
-	private final int HEXAGON = 6;
+	private static final int LINE      = 2;
+	private static final int TRIANGLE  = 3;
+	private static final int RECTANGLE = 4;
+	private static final int PENTAGON  = 5;
+	private static final int HEXAGON   = 6;
 	
 	/**
 	 * local {@link MapArea} object.
 	 */
 	private MapArea map;
+
 	
 	/**
 	 * <p>
@@ -144,7 +140,6 @@ public class MapMaker extends Application{
 		bottomBar.setPrefWidth(root.getWidth());
 		
 		Scene scene = new Scene(root,1000,600);
-//		scene.getStylesheets().add(new File(CSS_PATH).toURI().toString());
 		scene.getStylesheets().add(MapMaker.class.getResource(CSS_PATH).toString());
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Map Maker");
